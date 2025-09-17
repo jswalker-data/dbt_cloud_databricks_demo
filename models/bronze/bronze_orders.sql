@@ -1,13 +1,14 @@
 {{
     config(
-        materialized='incremental'
+        materialized='incremental',
+        unique_key 'id'
     )
 }}
 
 SELECT
 *
 FROM 
-{{ source('landing', 'orders_incramental') }}
+{{ source('landing', 'orders') }}
 
 {% if is_incremental() %}
 
