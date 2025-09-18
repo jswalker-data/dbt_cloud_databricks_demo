@@ -4,8 +4,13 @@ sources:
   - name: landing
     database: "{{ env_var('DBT_CATALOG') }}"
     schema: landing
+    description: >
+          This is the souce that contains a collection of raw data used for the modelling.
+
+          It is primarily used for file uploads andserves as a central repository for managing and analyzing cutom entities.
     tables:
       - name: orders
+        description: "{{ doc('orders') }}"
         columns:
         - name: id
           tests:
