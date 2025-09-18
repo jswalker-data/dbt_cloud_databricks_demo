@@ -22,7 +22,6 @@ sources:
           tests:
             - assert_non_negative
 
-
       - name: products
         columns:
         - name: id
