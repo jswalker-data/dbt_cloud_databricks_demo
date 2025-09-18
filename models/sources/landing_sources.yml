@@ -2,7 +2,10 @@ version: 2
 
 sources:
   - name: landing
-    database: dbt_project_catalog
+    database: |
+      {%- if target.name == "prod" -%} dbt_project_catalog_prod
+      {%- else -%} dbt_project_catalog
+      {%- endif -%}
     schema: landing
     tables:
       - name: orders
