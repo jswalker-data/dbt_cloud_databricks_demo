@@ -46,7 +46,7 @@ models:
       +schema: silver
 
     gold:
-      +materialized: table
+      +materialized: view
       +schema: gold
 
 seeds:
