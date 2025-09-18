@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: landing
-    database: {{ "env_var('DBT_CATALOG')" }}
+    database: "{{ env_var('DBT_CATALOG') }}"
     schema: landing
     tables:
       - name: orders
